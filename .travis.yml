@@ -17,5 +17,6 @@ before_install:
 install: 
   - pwd 
   - ls 
-  - chmod +x scripts/deploy.sh
-script: true
+  - chmod +x ./deploy.sh
+script:
+  - ./deploy.sh
