@@ -1,25 +1,9 @@
 dist: focal
 arch: amd64
 os: linux
-group: edge
 
 language: java
 jdk: openjdk11
 
-branches:
-  only:
-    - master
-    - main
-
-env:
-  - CI=false TERM=xterm
-
-before_install:
-  - git checkout $TRAVIS_BRANCH
-
-install: 
-  - pwd 
-  - ls 
-  - chmod +x ./deploy.sh
 script:
   - ./deploy.sh
