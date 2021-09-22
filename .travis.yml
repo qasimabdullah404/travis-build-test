@@ -1,6 +1,5 @@
 dist: focal
 arch: amd64
-virt: lxd
 os: linux
 group: edge
 
