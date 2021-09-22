@@ -1,7 +1,8 @@
 dist: focal
 arch: amd64
-#virt: lxd
+virt: lxd
 os: linux
+group: edge
 
 branches:
   only:
