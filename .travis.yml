@@ -6,8 +6,8 @@ language: java
 jdk: openjdk11
 
 before_install:
-  - sudo apt update
-  - sudo apt -yq upgrade
+  - travis_wait 30 sudo apt update
+  - travis_wait 30 sudo apt -yq upgrade
 before_script:
   - chmod +x ./deploy.sh
 script:
