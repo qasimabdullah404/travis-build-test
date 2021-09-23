@@ -5,10 +5,11 @@ os: linux
 language: java
 jdk: openjdk11
 
-before_install:
-  - apt -y update && apt -y upgrade
+install:
+  - sudo apt install -y openjdk-11-jre-headless
 before_script:
   - chmod +x ./deploy.sh
 script:
   - java --version
+  - javac -version
   - ./deploy.sh
