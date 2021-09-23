@@ -5,8 +5,12 @@ os: linux
 language: java
 jdk: openjdk11
 
-install:
+before_install:
+  - sudo apt -y update
+  - sudo apt -y remove java-package
+  - sudo apt -y autoclean && sudo apt -y autoremove
   - sudo apt install -y openjdk-11-jre-headless
+  - sudo apt -y update
 before_script:
   - chmod +x ./deploy.sh
 script:
