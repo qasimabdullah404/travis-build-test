@@ -7,7 +7,7 @@ jdk: openjdk11
 
 before_install:
   - sudo apt -y update
-  - sudo apt -y remove java-package
+  - sudo apt remove -y openjdk-11*
   - sudo apt -y autoclean && sudo apt -y autoremove
   - sudo apt install -y openjdk-11-jre-headless
   - sudo apt -y update
