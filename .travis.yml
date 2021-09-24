@@ -1,20 +1,7 @@
 dist: focal
-arch: amd64
 os: linux
-language: java
-jdk: openjdk11
-before_install:
-- openssl aes-256-cbc -K $encrypted_60e8b7beb8f6_key -iv $encrypted_60e8b7beb8f6_iv
-  -in secret.txt.enc -out secret.txt -d
-- sudo apt -y update
-- sudo apt remove -y openjdk-11*
-- sudo apt -y autoclean && sudo apt -y autoremove
-- sudo apt install -y openjdk-11-jre-headless
-- sudo apt -y update
-- update-java-alternatives -l
-before_script:
-- chmod +x ./deploy.sh
-script:
-- java --version
-- javac -version
-- "./deploy.sh"
+arch: amd64
+virt: lxd
+language: ruby
+
+script: true
