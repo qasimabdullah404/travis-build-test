@@ -1,8 +1,15 @@
+language: go
+os:
+  - linux
 dist: focal
-os: linux
-arch: amd64
-virt: lxd
-language: ruby
-
+arch:
+  - amd64
+virt: vm
+group: edge
+vm:
+  size: x-large
+services:
+  - docker
+  
 script:
-  - echo hello
+  - free -m
