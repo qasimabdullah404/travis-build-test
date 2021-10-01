@@ -36,6 +36,11 @@ jobs:
     - os: osx
       osx_image: xcode12.5
       language: ruby
+      ruby:
+        - 2.4.1
+      addons:
+        homebrew:
+          update: true
       script: true
     - os: linux
       dist: bionic
