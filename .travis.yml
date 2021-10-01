@@ -3,13 +3,13 @@ jobs:
     - os: linux
       dist: trusty
       script:
-        - sudo apt install -y ca-certificates openssl-1.1.1-1ubuntu2.1~18.04.13 
+        - sudo apt install -y ca-certificates openssl_1.0.2g-1ubuntu4.19_1.0.2g-1ubuntu4.20
         - sudo update-ca-certificates
         - curl https://asset-packagist.org/packages.json
     - os: linux
       dist: xenial
       script:
-        - sudo apt install -y ca-certificates openssl-1.1.1-1ubuntu2.1~18.04.13
+        - sudo apt install -y ca-certificates openssl_1.0.2g-1ubuntu4.19_1.0.2g-1ubuntu4.20
         - sudo update-ca-certificates
         - curl https://asset-packagist.org/packages.json
     - os: linux
