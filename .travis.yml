@@ -37,3 +37,19 @@ jobs:
       osx_image: xcode12.5
       language: ruby
       script: true
+    - os: linux
+      dist: xenial
+      language: node_js
+      node_js:
+        - 10
+      addons:
+        - rethinkdb: '2.3.6'
+      script: true
+    - os: linux
+      dist: xenial
+      language: node_js
+      node_js:
+        - 12
+      addons:
+        - rethinkdb: '2.3.6'
+      script: true
