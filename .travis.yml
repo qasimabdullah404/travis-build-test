@@ -18,7 +18,7 @@ jobs:
     - os: linux
       dist: bionic
       language: java
-      jdk: openjdk12
+      jdk: openjdk15
       install:
         - sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
       script:
