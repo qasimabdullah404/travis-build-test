@@ -2,14 +2,26 @@ jobs:
   include:
     - os: linux
       dist: trusty
+      before_install:
+        - wget https://www.openssl.org/source/old/1.1.0/openssl-1.1.0g.tar.gz
+        - tar xzvf openssl-1.1.0g.tar.gz
+        - cd openssl-1.1.0g
+        - ./config
+        - make
+        - sudo make install
       script:
-        - sudo apt install -y ca-certificates openssl_1.0.2g-1ubuntu4.19_1.0.2g-1ubuntu4.20
         - sudo update-ca-certificates
         - curl https://asset-packagist.org/packages.json
     - os: linux
       dist: xenial
+      before_install:
+        - wget https://www.openssl.org/source/old/1.1.0/openssl-1.1.0g.tar.gz
+        - tar xzvf openssl-1.1.0g.tar.gz
+        - cd openssl-1.1.0g
+        - ./config
+        - make
+        - sudo make install
       script:
-        - sudo apt install -y ca-certificates openssl_1.0.2g-1ubuntu4.19_1.0.2g-1ubuntu4.20
         - sudo update-ca-certificates
         - curl https://asset-packagist.org/packages.json
     - os: linux
