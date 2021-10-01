@@ -3,12 +3,16 @@ jobs:
     - os: linux
       dist: trusty
       script:
-        - sudo apt-get update && sudo apt-get install apt-transport-https ca-certificates -y && sudo update-ca-certificates
+        - sudo apt-get update
+        - sudo apt install ca-certificates openssl-1.1.1
+        - sudo update-ca-certificates
         - curl https://asset-packagist.org/packages.json
     - os: linux
       dist: xenial
       script:
-        - sudo apt-get update && sudo apt-get install apt-transport-https ca-certificates -y && sudo update-ca-certificates
+        - sudo apt-get update
+        - sudo apt install ca-certificates openssl-1.1.1
+        - sudo update-ca-certificates
         - curl https://asset-packagist.org/packages.json
     - os: linux
       dist: bionic
