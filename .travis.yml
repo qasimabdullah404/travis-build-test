@@ -38,7 +38,7 @@ jobs:
       language: ruby
       script: true
     - os: linux
-      dist: xenial
+      dist: bionic
       language: node_js
       node_js:
         - 10
@@ -46,7 +46,7 @@ jobs:
         - rethinkdb: '2.3.6'
       script: true
     - os: linux
-      dist: xenial
+      dist: bionic
       language: node_js
       node_js:
         - 12
