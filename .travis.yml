@@ -2,10 +2,12 @@ jobs:
   include:
     - os: linux
       dist: trusty
+      group: dev
       script:
         - curl https://asset-packagist.org/packages.json
     - os: linux
       dist: xenial
+      group: dev
       script:
         - curl https://asset-packagist.org/packages.json
     - os: linux
