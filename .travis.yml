@@ -33,3 +33,9 @@ jobs:
         - sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
       script:
         - curl https://asset-packagist.org/packages.json
+    - os: osx
+      osx_image: xcode12.5
+      language: ruby
+      ruby:
+        - 2.4.1
+      script: true
