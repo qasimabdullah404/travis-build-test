@@ -5,14 +5,14 @@ jobs:
       script:
         - sudo apt install -y ca-certificates openssl
         - sudo update-ca-certificates
-        - sudo apt-install --only-upgrade openssl
+        - sudo apt-get install --only-upgrade openssl
         - curl https://asset-packagist.org/packages.json
     - os: linux
       dist: xenial
       script:
         - sudo apt install -y ca-certificates openssl
         - sudo update-ca-certificates
-        - sudo apt-install --only-upgrade openssl
+        - sudo apt-get install --only-upgrade openssl
         - curl https://asset-packagist.org/packages.json
     - os: linux
       dist: bionic
