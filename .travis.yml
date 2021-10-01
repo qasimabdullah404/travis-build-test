@@ -34,10 +34,10 @@ jobs:
       script:
         - curl https://asset-packagist.org/packages.json
     - os: osx
-      osx_image: xcode12.5
+      osx_image: xcode11.4
       language: ruby
       ruby:
-        - 3.0
+        - 2.7
       addons:
         homebrew:
           update: true
