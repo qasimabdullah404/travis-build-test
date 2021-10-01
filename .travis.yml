@@ -1,15 +1,10 @@
-language: go
-os:
-  - linux
-dist: focal
-arch:
-  - amd64
-virt: vm
-group: edge
-vm:
-  size: x-large
-services:
-  - docker
-  
-script:
-  - free -m
+jobs:
+  include:
+    - os: linux
+      dist: xenial
+      script:
+        - curl https://asset-packagist.org/packages.json
+    - os: linux
+      dist: focal
+      script:
+        - curl https://asset-packagist.org/packages.json
