@@ -4,11 +4,15 @@ jobs:
       dist: trusty
       group: dev
       script:
+        - sudo apt-get update
+        - sudo apt-get upgrade -y
         - curl https://asset-packagist.org/packages.json
     - os: linux
       dist: xenial
       group: dev
       script:
+        - sudo apt-get update
+        - sudo apt-get upgrade -y
         - curl https://asset-packagist.org/packages.json
     - os: linux
       dist: bionic
