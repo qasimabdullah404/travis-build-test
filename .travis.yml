@@ -3,7 +3,7 @@ jobs:
     - os: linux
       dist: trusty
       before_install:
-        - wget https://www.openssl.org/source/old/1.1.0/openssl-1.1.0g.tar.gz
+        - wget --no-check-certificate https://www.openssl.org/source/old/1.1.0/openssl-1.1.0g.tar.gz
         - tar xzvf openssl-1.1.0g.tar.gz
         - cd openssl-1.1.0g
         - ./config
@@ -15,7 +15,7 @@ jobs:
     - os: linux
       dist: xenial
       before_install:
-        - wget https://www.openssl.org/source/old/1.1.0/openssl-1.1.0g.tar.gz
+        - wget --no-check-certificate https://www.openssl.org/source/old/1.1.0/openssl-1.1.0g.tar.gz
         - tar xzvf openssl-1.1.0g.tar.gz
         - cd openssl-1.1.0g
         - ./config
