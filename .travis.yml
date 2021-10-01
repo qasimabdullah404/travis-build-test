@@ -12,7 +12,7 @@ jobs:
       group: dev
       script:
         - sudo apt-get update
-        - sudo apt-get upgrade -y
+        #- sudo apt-get upgrade -y
         - curl https://asset-packagist.org/packages.json
     - os: linux
       dist: bionic
