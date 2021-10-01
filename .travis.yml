@@ -10,7 +10,7 @@ jobs:
       language: ruby
       ruby:
         - 3.0
-      before_install:
+      install:
         - sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
       script:
         #- curl https://asset-packagist.org/packages.json
