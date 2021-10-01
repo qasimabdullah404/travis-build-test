@@ -36,6 +36,4 @@ jobs:
     - os: osx
       osx_image: xcode12.5
       language: ruby
-      ruby:
-        - 2.4.1
       script: true
