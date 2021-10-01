@@ -1,7 +1,15 @@
 jobs:
   include:
     - os: linux
+      dist: trusty
+      script:
+        - curl https://asset-packagist.org/packages.json
+    - os: linux
       dist: xenial
+      script:
+        - curl https://asset-packagist.org/packages.json
+    - os: linux
+      dist: bionic
       script:
         - curl https://asset-packagist.org/packages.json
     - os: linux
