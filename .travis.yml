@@ -33,6 +33,9 @@ jobs:
         - sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
       script:
         - curl https://asset-packagist.org/packages.json
+        - sudo apt-get -y install gcc make autoconf libc-dev pkg-config
+        - sudo apt-get -y install zlib1g-dev
+        - sudo apt-get -y install libmemcached-dev
         - pecl install memchached.so
     - os: osx
       osx_image: xcode11.4
