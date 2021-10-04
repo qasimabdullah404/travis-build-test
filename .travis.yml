@@ -26,13 +26,14 @@ jobs:
         - curl https://asset-packagist.org/packages.json
     - os: linux
       dist: focal
-      language: ruby
+      language: php
       ruby:
-        - 3.0
+        - 7.4
       install:
         - sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
       script:
         - curl https://asset-packagist.org/packages.json
+        - pecl install memchached.so
     - os: osx
       osx_image: xcode11.4
       language: ruby
