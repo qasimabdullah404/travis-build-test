@@ -27,7 +27,7 @@ jobs:
     - os: linux
       dist: focal
       language: php
-      ruby:
+      php:
         - 7.4
       install:
         - sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
