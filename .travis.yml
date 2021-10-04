@@ -3,15 +3,15 @@ jobs:
     - os: linux
       dist: trusty
       script:
-        - sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
+        #- sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
         - curl https://asset-packagist.org/packages.json
     - os: linux
       dist: xenial
-      #language: ruby
-      #ruby:
-      #  - 3.0
-      before_install:
-        - sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
+      language: ruby
+      ruby:
+        - 3.0
+      #before_install:
+        #- sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
       script:
         - curl https://asset-packagist.org/packages.json
         - echo done
@@ -19,18 +19,18 @@ jobs:
       dist: bionic
       language: java
       jdk: openjdk15
-      install:
-        - sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
+      #install:
+        #- sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
       script:
-        - sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
+        #- sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
         - curl https://asset-packagist.org/packages.json
     - os: linux
       dist: focal
       language: php
       php:
         - 7.4
-      install:
-        - sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
+      #install:
+        #- sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
       script:
         - curl https://asset-packagist.org/packages.json
         - wget http://pecl.php.net/get/memcached-3.1.5.tgz
@@ -52,7 +52,7 @@ jobs:
         - docker
       env:
         - GO111MODULE: 'off'
-      before_install:
-        - sudo apt-get update && sudo apt-get install apt-transport-https ca-certificates -y && sudo update-ca-certificates
+      #before_install:
+        #- sudo apt-get update && sudo apt-get install apt-transport-https ca-certificates -y && sudo update-ca-certificates
       script: true
       
