@@ -46,21 +46,13 @@ jobs:
       script: true
     - os: linux
       dist: focal
-      language: node_js
-      node_js:
-        - 10
-      addons:
-        - rethinkdb: '2.3.6'
-      before_install:
-        - sudo apt-get update && sudo apt-get install apt-transport-https ca-certificates -y && sudo update-ca-certificates
+      language: go
+      go: '1.16'
+      services:
+        - docker
+      env:
+        - GO111MODULE: 'off'
+      #before_install:
+      #  - sudo apt-get update && sudo apt-get install apt-transport-https ca-certificates -y && sudo update-ca-certificates
       script: true
-    - os: linux
-      dist: focal
-      language: node_js
-      node_js:
-        - 12
-      addons:
-        - rethinkdb: '2.3.6'
-      before_install:
-        - sudo apt-get update && sudo apt-get install apt-transport-https ca-certificates -y && sudo update-ca-certificates
-      script: true
+      
