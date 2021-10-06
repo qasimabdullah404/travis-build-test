@@ -1,4 +1,3 @@
 source 'http://rubygems.org'
 
-gem 'rails',
-gem 'sqlite3'
+gem ruby '2.3.3'
