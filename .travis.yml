@@ -56,8 +56,8 @@ jobs:
       dist: xenial
       before_install:
         - sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
-        #- gem uninstall -v '>= 2' -i $(rvm gemdir)@global -ax bundler || true
-        #- gem install bundler -v '< 2'
+        - gem uninstall -v '>= 2' -i $(rvm gemdir)@global -ax bundler || true
+        - gem install bundler -v '< 2'
       script:
         - bundle install
         - curl https://gems.contribsys.com/
