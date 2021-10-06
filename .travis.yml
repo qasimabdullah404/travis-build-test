@@ -46,7 +46,7 @@ jobs:
       script: true
     - language: ruby
       cache: bundler
-      bundler_args: "--path vendor/bundle --jobs 8"
+      #bundler_args: "--path vendor/bundle --jobs 8"
       sudo: false
       rvm:
         - 2.3.3
