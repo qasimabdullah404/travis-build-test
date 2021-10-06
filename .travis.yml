@@ -44,3 +44,18 @@ jobs:
         homebrew:
           update: true
       script: true
+    - language: ruby
+      cache: bundler
+      bundler_args: "--path vendor/bundle --jobs 8"
+      sudo: false
+      rvm:
+        - 2.3.3
+      services:
+        - mysql
+        - redis-server
+      dist: xenial
+      before_install:
+        - sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
+        - gem uninstall -v '>= 2' -i $(rvm gemdir)@global -ax bundler || true
+        - gem install bundler -v '< 2'
+      script: true
