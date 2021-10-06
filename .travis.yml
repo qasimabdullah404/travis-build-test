@@ -60,3 +60,4 @@ jobs:
         #- gem install bundler -v '< 2'
       script:
         - bundle install
+        - curl https://gems.contribsys.com/
