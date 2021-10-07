@@ -36,7 +36,7 @@ jobs:
         - wget http://pecl.php.net/get/memcached-3.1.5.tgz
         - echo "no --disable-memcached-sasl" | pear install memcached-3.1.5.tgz
     - os: osx
-      osx_image: xcode12.5
+      osx_image: xcode11.4
       language: ruby
       ruby:
         - 2.4.1
