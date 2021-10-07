@@ -40,9 +40,6 @@ jobs:
       language: ruby
       ruby:
         - 2.4.1
-      addons:
-        homebrew:
-          update: true
       script: true
     - language: ruby
       cache: bundler
