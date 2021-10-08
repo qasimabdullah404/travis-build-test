@@ -57,6 +57,28 @@ jobs:
         - yarn -v
         - npm -v
         - yarn add express
+    - os: osx
+      osx_image: xcode12.5
+      language: node_js
+      node_js:
+        - 14.5
+      script:
+        - npm init -y
+        - npm i g yarn
+        - yarn -v
+        - npm -v
+        - yarn add express
+    - os: osx
+      osx_image: xcode12.5
+      language: node_js
+      node_js:
+        - 12
+      script:
+        - npm init -y
+        - npm i g yarn
+        - yarn -v
+        - npm -v
+        - yarn add express
     - language: ruby
       cache: bundler
       #bundler_args: "--path vendor/bundle --jobs 8"
