@@ -41,6 +41,7 @@ jobs:
       node_js:
         - 12
       script:
+        - npm i g yarn
         - yarn -v
         - npm -v
     - language: ruby
