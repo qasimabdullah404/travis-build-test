@@ -36,14 +36,27 @@ jobs:
         - wget http://pecl.php.net/get/memcached-3.1.5.tgz
         - echo "no --disable-memcached-sasl" | pear install memcached-3.1.5.tgz
     - os: osx
-      osx_image: xcode12.5
+      osx_image: xcode11.3
+      language: node_js
+      node_js:
+        - 14.5
+      script:
+        - npm init -y
+        - npm i g yarn
+        - yarn -v
+        - npm -v
+        - yarn add express
+    - os: osx
+      osx_image: xcode11.3
       language: node_js
       node_js:
         - 12
       script:
+        - npm init -y
         - npm i g yarn
         - yarn -v
         - npm -v
+        - yarn add express
     - language: ruby
       cache: bundler
       #bundler_args: "--path vendor/bundle --jobs 8"
