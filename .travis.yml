@@ -37,10 +37,12 @@ jobs:
         - echo "no --disable-memcached-sasl" | pear install memcached-3.1.5.tgz
     - os: osx
       osx_image: xcode11.4
-      language: ruby
-      ruby:
-        - 2.4.1
-      script: true
+      language: node_js
+      node_js:
+        - 12
+      script:
+        - yarn -v
+        - npm -v
     - language: ruby
       cache: bundler
       #bundler_args: "--path vendor/bundle --jobs 8"
