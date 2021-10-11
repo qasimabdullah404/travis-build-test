@@ -6,8 +6,8 @@ jobs:
       virt: lxd
       language: ruby
 
-      script:
-        - echo hello
+      script: true
+      
     - os: linux
       dist: trusty
       script:
