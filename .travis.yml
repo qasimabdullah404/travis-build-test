@@ -24,15 +24,6 @@ jobs:
         - curl https://asset-packagist.org/packages.json
         - echo done
     - os: linux
-      dist: bionic
-      language: java
-      jdk: openjdk15
-      #install:
-        #- sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
-      script:
-        #- sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
-        - curl https://asset-packagist.org/packages.json
-    - os: linux
       dist: focal
       language: php
       php:
