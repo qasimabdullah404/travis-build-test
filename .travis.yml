@@ -1,6 +1,6 @@
 jobs:
   include:
-    - dist: bionic
+    - dist: precise
       os: linux
       arch: amd64
       virt: lxd
@@ -10,7 +10,7 @@ jobs:
         - composer self-update
       script: true
       
-    - dist: bionic
+    - dist: precise
       os: linux
       arch: amd64
       virt: lxd
