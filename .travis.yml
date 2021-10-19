@@ -13,8 +13,8 @@ jobs:
       language: node_js
       node_js: 12.4
       
-      install:
-        - yarn
+      before_install:
+        - npm i yarn -g
 
       script: true
       
@@ -23,7 +23,7 @@ jobs:
       language: node_js
       node_js: 12.4
       
-      install:
-        - yarn
+      before_install:
+        - npm i yarn -g
 
       script: true
