@@ -4,7 +4,11 @@ jobs:
       os: linux
       arch: amd64
       virt: lxd
-      language: ruby
+      language: node_js
+      node_js: 12.4
+      
+      before_install:
+        - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then npm i yarn -g; fi
 
       script: true
       
@@ -14,7 +18,7 @@ jobs:
       node_js: 12.4
       
       before_install:
-        - npm i yarn -g
+        - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then npm i yarn -g; fi
 
       script: true
       
@@ -24,6 +28,6 @@ jobs:
       node_js: 12.4
       
       before_install:
-        - npm i yarn -g
+        - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then npm i yarn -g; fi
 
       script: true
