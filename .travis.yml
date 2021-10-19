@@ -8,44 +8,22 @@ jobs:
 
       script: true
       
-    - os: linux
-      dist: trusty
-      script:
-        #- sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
-        - curl https://asset-packagist.org/packages.json
-    - os: linux
-      dist: xenial
-      language: ruby
-      ruby:
-        - 3.0
-      #before_install:
-        #- sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
-      script:
-        - curl https://asset-packagist.org/packages.json
-        - echo done
-    - os: linux
-      dist: focal
-      language: php
-      php:
-        - 7.4
-      #install:
-        #- sudo apt update && sudo apt install libgnutls-openssl27 libgnutls30
-      script:
-        - curl https://asset-packagist.org/packages.json
-        - wget http://pecl.php.net/get/memcached-3.1.5.tgz
-        - echo "no --disable-memcached-sasl" | pear install memcached-3.1.5.tgz
-    - os: linux
-      dist: xenial
-      language: python
-      python:
-        - 3.7.3
-      services:
-        - docker
-      before_install:
-        - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-        - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-        - sudo apt-get update
-        - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
-      script:
-        - docker version
-        - echo done
+    - osx_image: xcode9.1
+      os: osx
+      language: node_js
+      node_js: 12.4
+      
+      install:
+        - yarn
+
+      script: true
+      
+    - osx_image: xcode9.4
+      os: osx
+      language: node_js
+      node_js: 12.4
+      
+      install:
+        - yarn
+
+      script: true
