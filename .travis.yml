@@ -8,7 +8,7 @@ jobs:
       language: php
       php: 5.3
       before_install:
-        - apt-get update
+        - sudo update-ca-certificates 
         - composer self-update
       script: true
       
@@ -18,6 +18,6 @@ jobs:
       language: php
       php: 5.4
       before_install:
-        - apt-get update
+        - sudo update-ca-certificates 
         - composer self-update
       script: true
